@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="menu">
+            <button id="JP_btn" class="activebtn" value="Japan" onclick="MenuBtn('JP_btn')">日本</button>
+            <button id="VN_btn" value="VN" onclick="MenuBtn('VN_btn')">ベトナム</button>
+            <button id="Case_btn" value="Case" onclick="MenuBtn('Case_btn')">世界感染</button>
+            <button id="Death_btn" value="Death" onclick="MenuBtn('Death_btn')">世界死亡</button>
+        </div>
+        <div id="main-list">
+            <div id="search">
+                <div id="search-input">
+                    <div id="input-box">
+                        <input type="text" value="" placeholder="地名を入力下さい" id="KeySearch">
+                        <button type="submit" onclick="search()"><i class="bi bi-search"></i></button></div>
+                    <div id="input-text"><i class="bi bi-arrow-bar-left"></i>地名を正しく入力下さい</div>
+                </div>
+                <div id="search-output"></div>
+            </div>
+            <div id="slides">
+                <div class="slide-list slideActive" id="Japan">
+                    <div id="japan-box" class="box">
+                        <div id="japan-case" class="boxfr">
+                            <div id="japan-case-text"> </div>
+                            <canvas id="casejp"></canvas>
+                        </div>
+                        <div id="japan-today" class="boxfr">
+                            <div id="japan-today-text"> </div>
+                            <canvas id="todayjp"></canvas>
+                        </div>
+                        <div id="japan-death" class="boxfr">
+                            <div id="japan-death-text"> </div>
+                            <canvas id="deathjp"></canvas>
+                        </div>
+                        <div class="boxfr"><canvas id="japan-canvas"></canvas></div>
+                    </div>
+                    <div id="japan-table" class="table-03">
+                        <table id="tableJP-01" class="Tabletr"></table>
+                        <table id="tableJP-02" class="Tabletr"></table>
+                        <table id="tableJP-03" class="Tabletr"></table>
+                    </div>
+                </div>
+                <div class="slide-list" id="vietnam">
+                    <div id="vietnam-box" class="box">
+                        <div id="vietnam-case" class="boxfr">
+                            <div id="vietnam-case-text"> </div>
+                            <canvas id="todayvn"></canvas>
+                        </div>
+                        <div id="vietnam-today" class="boxfr">
+                            <div id="vietnam-recover-text"></div>
+                            <canvas id="recover"></canvas>
+                        </div>
+                        <div id="vietnam-death" class="boxfr">
+                            <div id="vietnam-death-text"> </div>
+                            <canvas id="deathvn"></canvas>
+                        </div>
+                        <div class="boxfr"><canvas id="vietnam-canvas"></canvas></div>
+                    </div>
+                    <div id="vietnam-table" class="table-03">
+                        <table id="tableVN-01" class="Tabletr"></table>
+                        <table id="tableVN-02" class="Tabletr"></table>
+                        <table id="tableVN-03" class="Tabletr"></table>
+                    </div>
+                </div>
+                <div class="slide-list" id="worldcase">
+                    <div id="cases-table" class="table-04">
+                        <table id="tableCases-01" class="Tabletr"></table>
+                        <table id="tableCases-02" class="Tabletr"></table>
+                        <table id="tableCases-03" class="Tabletr"></table>
+                        <table id="tableCases-04" class="Tabletr"></table>
+                    </div>
+                </div>
+                <div class="slide-list" id="worlddeath">
+                    <div id="death-table" class="table-04">
+                        <table id="tableDeath-01" class="Tabletr"></table>
+                        <table id="tableDeath-02" class="Tabletr"></table>
+                        <table id="tableDeath-03" class="Tabletr"></table>
+                        <table id="tableDeath-04" class="Tabletr"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/VietNam.js"></script>
+        <script src="js/Menu-Search.js"></script>
+        <script src="js/Japan.js"></script>
+        <script src="js/World.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+#slides {
+    margin-top: 10px;
+    position: relative;
+    .slide-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        text-align: center;
+        color: #212121;
+        overflow-y: scroll;
+        .slideActive {
+            z-index: 2;
+            opacity: 1;
+            transition: 1s;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #slideshow {
+        line-height: 1;
+        font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+    
+    #slides {
+        padding: 0;
+        margin: 0;
+        background: #000;
+        overflow: hidden
+    }
+    
+    #slides>li {
+        position: absolute;
+        clear: both;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        opacity: 0;
+        overflow: hidden;
+        font-size: 50vh;
+        line-height: 100vh;
+        text-align: center;
+        color: #212121;
+    }
+    
+    #slides li:JP_btn-child {
+        background: #F44336
+    }
+    
+    #slides li:nth-child(2) {
+        background: #E91E63
+    }
+    
+    #slides li:nth-child(3) {
+        background: #9C27B0
+    }
+    
+    #slides li:nth-child(4) {
+        background: #673AB7
+    }
+    
+    #slides li:nth-child(5) {
+        background: #3F51B5
+    }
+    
+    #slides li:last-child {
+        background: #2196F3
+    }
+    
+    #slides li.slideActive {
+        z-index: 99;
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    #JP_btn {
+        background: #F44336
+    }
+    
+    #VN_btn {
+        background: #E91E63
+    }
+    
+    #Case_btn {
+        background: #9C27B0
+    }
+    
+    #Death_btn {
+        background: #673AB7
+    }
+    
+    #fifth {
+        background: #3F51B5
+    }
+    
+    #sixth {
+        background: #2196F3
+    }
+    
+    .pager ul {
+        display: table;
+        width: 100%;
+        position: absolute;
+        z-index: 999
+    }
+    
+    .pager ul li {
+        display: table-cell;
+        line-height: 36px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="slideshow">
+        <ul id="slides">
+            <li class="slide-list slideActive">1</li>
+            <li class="slide-list">2</li>
+            <li class="slide-list">3</li>
+            <li class="slide-list">4</li>
+            <li class="slide-list">5</li>
+            <li class="slide-list">6</li>
+        </ul>
+        <div class="pager">
+            <ul>
+                <li id="JP_btn">0</li>
+                <li id="VN_btn">2</li>
+                <li id="Case_btn">3</li>
+                <li id="Death_btn">4</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var slide = 0,
+        slides = document.querySelectorAll('#slides > li'),
+        numSlides = slides.length,
+
+        //Functions!!
+        currentSlide = function() {
+            var itemToShow = Math.abs(slide % numSlides);
+            [].forEach.call(slides, function(el) {
+                el.classList.remove('slideActive')
+            });
+            slides[itemToShow].classList.add('slideActive');
+        },
+        resetProgress = function() {
+            var elm = document.querySelector('.progressbar'),
+                newone = elm.cloneNode(true),
+                x = elm.parentNode.replaceChild(newone, elm);
+        },
+        resetslide = function() {
+            var elm = document.querySelector('#slides > li'),
+                newone = elm.cloneNode(true),
+                x = elm.parentNode.replaceChild(newone, elm);
+        };
+
+
+    //Buttons
+    document.querySelector('#JP_btn').addEventListener('click', function() {
+        slide = 0;
+        currentSlide();
+    }, false);
+    document.querySelector('#VN_btn').addEventListener('click', function() {
+        slide = 1;
+        currentSlide();
+    }, false);
+    document.querySelector('#Case_btn').addEventListener('click', function() {
+        slide = 2;
+        currentSlide();
+    }, false);
+    document.querySelector('#Death_btn').addEventListener('click', function() {
+        slide = 3;
+        currentSlide();
+    }, false);
+</script>
+
+</html>

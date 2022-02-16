@@ -1,0 +1,78 @@
+#search {
+    width: 100%;
+    height: 110px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $IdBorder;
+    &-input {
+        height: 50px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 10px;
+        #input-box {
+            display: flex;
+            box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 0 auto;
+            width: 80%;
+            height: 25px;
+            input {
+                width: calc(100% - 40px);
+                text-align: center;
+                border: 1px solid $IdBorder;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            button {
+                width: 40px;
+                padding: 0 10px;
+                border: none;
+                background-color: $blue;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                &:hover {
+                    color: $blue;
+                    background-color: $btnColor;
+                }
+            }
+            .bi-search {
+                font-size: 15px;
+            }
+        }
+        #input-text {
+            height: 25px;
+            line-height: 25px;
+            margin-left: 5%;
+        }
+    }
+    &-output {
+        padding: 3px 20px;
+        height: 40px;
+        text-align: center;
+        #output2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #output3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #output4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .search-output-text,
+        .search-output-text-name {
+            width: 70%;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .search-output-text {
+            padding-top: 5px;
+            line-height: 20px;
+        }
+        .search-output-text-name {
+            line-height: 40px;
+        }
+    }
+}

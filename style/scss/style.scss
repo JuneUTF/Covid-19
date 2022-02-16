@@ -1,0 +1,10 @@
+@media screen and (min-width:124px) {
+    @import "./reset";
+    @import "./font";
+    @import "./var";
+    @import "./main";
+    @import "./search";
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+}
+
+@import "./responsive";

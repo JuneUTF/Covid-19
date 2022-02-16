@@ -1,0 +1,481 @@
+@media screen and (min-width: 124px) {
+  /*
+  html5doctor.com Reset Stylesheet
+  v1.6.1
+  Last Updated: 2010-09-17
+  Author: Richard Clark - http://richclarkdesign.com
+  Twitter: @rich_clark
+  */
+  html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  blockquote,
+q {
+    quotes: none;
+  }
+
+  blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+  /* change colours to suit your needs */
+  ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* change colours to suit your needs */
+  mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  del {
+    text-decoration: line-through;
+  }
+
+  abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* change border colour to suit your needs */
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  input,
+select {
+    vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400&display=swap");
+  #main {
+    display: grid;
+    grid-template-columns: 15% 85%;
+  }
+  #main #menu {
+    display: inline-block;
+    background-color: #287bff;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+  }
+  #main #menu button {
+    background-color: #287bff;
+    position: relative;
+    width: 95%;
+    padding: 15px;
+    margin: 10px 5% 0;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 18px;
+    color: white;
+  }
+  #main #menu .activebtn {
+    background-color: #ffffff;
+    color: #287bff;
+  }
+  #main #menu .activebtn::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: none;
+    bottom: -20px;
+    box-shadow: 10px 0px 0 0px #ffffff;
+    right: 0;
+    border-top-right-radius: 10px;
+  }
+  #main #menu .activebtn::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: none;
+    top: -20px;
+    box-shadow: 10px 0px 0 0px #ffffff;
+    right: 0;
+    border-bottom-right-radius: 10px;
+  }
+  #main #main-list {
+    width: 100%;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  #slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #slides .slide-list {
+    position: absolute;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    text-align: center;
+    color: #212121;
+  }
+  #slides .slideActive {
+    z-index: 1;
+    opacity: 1;
+    transition: 1s;
+  }
+  #slides .Tabletr {
+    position: relative;
+  }
+  #slides table {
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  #slides tr {
+    height: 20px;
+  }
+  #slides tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  #slides tr:hover {
+    background-color: #ddd;
+  }
+  #slides th {
+    width: 50%;
+  }
+  #slides td {
+    width: 50%;
+  }
+  #slides td,
+#slides th {
+    padding: 1px;
+  }
+  #slides .bg-border {
+    border-left-style: solid;
+    border-radius: 3px;
+    position: absolute;
+    left: 20%;
+    margin-left: 30%;
+    height: 18px;
+    line-height: 20px;
+    width: 0;
+    transition: 1;
+  }
+  #slides .casetd {
+    position: absolute;
+    left: 40%;
+  }
+  #slides .head-table_text span {
+    padding: 0 10px;
+  }
+
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+  }
+  .box .boxfr {
+    margin: 0 auto;
+    width: 90%;
+    line-height: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #287bff;
+  }
+  .box .boxfr p {
+    font-size: 24px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(245, 237, 237, 0.557);
+  }
+  .box .boxfr span {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .box .boxfr canvas {
+    width: 90%;
+  }
+
+  .table-03 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+
+  .table-04 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding-top: 10px;
+  }
+
+  #search {
+    width: 100%;
+    height: 110px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(245, 237, 237, 0.557);
+  }
+  #search-input {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 10px;
+  }
+  #search-input #input-box {
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 80%;
+    height: 25px;
+  }
+  #search-input #input-box input {
+    width: calc(100% - 40px);
+    text-align: center;
+    border: 1px solid rgba(245, 237, 237, 0.557);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  #search-input #input-box button {
+    width: 40px;
+    padding: 0 10px;
+    border: none;
+    background-color: #287bff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #search-input #input-box button:hover {
+    color: #287bff;
+    background-color: #CCC;
+  }
+  #search-input #input-box .bi-search {
+    font-size: 15px;
+  }
+  #search-input #input-text {
+    height: 25px;
+    line-height: 25px;
+    margin-left: 5%;
+  }
+  #search-output {
+    padding: 3px 20px;
+    height: 40px;
+    text-align: center;
+  }
+  #search-output #output2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #search-output #output3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #search-output #output4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #search-output .search-output-text,
+#search-output .search-output-text-name {
+    width: 70%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  #search-output .search-output-text {
+    padding-top: 5px;
+    line-height: 20px;
+  }
+  #search-output .search-output-text-name {
+    line-height: 40px;
+  }
+
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+}
+@media screen and (max-width: 1023px) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #search-input {
+    text-align: center;
+  }
+
+  #main {
+    grid-template-columns: 15% 85%;
+  }
+
+  .table-04 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+
+  #search-input {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .table-03,
+.table-04 {
+    grid-template-columns: 1fr;
+  }
+
+  #search {
+    font-size: 10px;
+    height: 150px;
+  }
+
+  #search-output {
+    height: 20px;
+  }
+  #search-output #output2,
+#search-output #output3,
+#search-output #output4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
