@@ -137,7 +137,7 @@ document.getElementById('KeySearch').onfocus = () => {
 let Margin = document.querySelector('#japan-case').clientHeight;
 let MarginPx;
 if (screen.width >= 1024) {
-    MarginPx = Margin + 10;
+    MarginPx = Margin + 50;
 } else if (screen.width >= 768) {
     MarginPx = Margin * 3
 } else if (screen.width < 768) {
